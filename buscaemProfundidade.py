@@ -1,11 +1,16 @@
-grafo = {'0': set(['0', '2']),
-         '1': set(['2', '3', '4']),
-         '2': set(['4', '5', '6']),
-         '3': set(['1','5']),
-         '4': set(['4','3']),
-         '5': set(['2','4']),
-         '6': set(['0','6'])
-         }
+grafo= {"A": ["B", "C"],
+        "B": ["E", "A"],
+        "C": ["E"],
+        "D": ["H", "G"],
+        "E": ["I", "F", "C", "B"],
+        "F": ["E", "I"],
+        "G": ["D", "K", "J"],
+        "H": ["K", "D"],
+        "I": ["J", "F", "E"],
+        "J": ["G", "L", "I"],
+        "K": ["G", "H"],
+        "L": ["J"],
+        }
 
 pilha = []
 marcados = []
@@ -55,3 +60,5 @@ while True:
     resp = input("Deseja verificar mais algum caminho? (S ou N):")
     if resp == 'N':
         break
+
+    #créditos ao Carlos Nobuaki
