@@ -19,6 +19,12 @@ def adjacentes(g,v):
   else: 
     print("O vertice ",v," não existe no grafo")
 
+
+def grau(g,v):
+  if v in g :
+    return len(g[v])
+  return -1
+
 grafo = {}
 
 while True:
@@ -38,3 +44,13 @@ adjacentes(grafo,v)
 
 # opcao = (input('digite a vertice:'))
 # print (grafo[opcao])
+
+v = (input('Digite seu vertice para determinar seu grau: '))
+
+
+x = grau(grafo,v)
+
+if x >= 0:
+  print('Grau do vertice', v, "=", x)
+else:
+  print('Vertice não existe no grafo! ')
