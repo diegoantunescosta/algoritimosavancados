@@ -20,6 +20,16 @@ def adjacentes(g,v):
     print("O vertice ",v," não existe no grafo")
 
 
+def regular (g):
+  g1 = grau (g, list(g.keys())[0])
+  for v in g:
+    g2= grau (g,v)
+    if g2!=g1:
+      return False
+  return True
+
+
+
 def grau(g,v):
   if v in g :
     return len(g[v])
@@ -54,3 +64,8 @@ if x >= 0:
   print('Grau do vertice', v, "=", x)
 else:
   print('Vertice não existe no grafo! ')
+
+if regular(grafo):
+  print("Grafo regular!")
+else:
+  print ("Grafo não é regular")
