@@ -7,6 +7,7 @@ def inserir(g, a, b):
   g[a].append(b)
   g[b].append(a)
 
+
 def imprimir(g):
   for v,a in g.items():
     print ('Vertice:',v)
@@ -28,6 +29,14 @@ def regular (g):
       return False
   return True
 
+def grau_grafo (g):
+  maior_grau = 0
+  for v in g:
+    g1 = grau(g,v)
+    if g1 > maior_grau:
+      maior_grau = g1 
+  
+  return maior_grau
 
 
 def grau(g,v):
@@ -69,3 +78,5 @@ if regular(grafo):
   print("Grafo regular!")
 else:
   print ("Grafo não é regular")
+
+print ("Grau do grafo =",grau_grafo(grafo))
