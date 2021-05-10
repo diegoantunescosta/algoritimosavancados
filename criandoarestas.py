@@ -35,7 +35,7 @@ def grau_grafo (g):
     g1 = grau(g,v)
     if g1 > maior_grau:
       maior_grau = g1 
-  
+
   return maior_grau
 
 
